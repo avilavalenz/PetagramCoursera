@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Petagram</string>
+    <string name="nombreMascota">Nombre de la mascota</string>
+    <string name="cantidadRating">5</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_settings">Configuracion</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation_actionBar">4dp</dimen>
+    <dimen name="width_imgCardView">280dp</dimen>
+    <dimen name="height_imgCardView">280dp</dimen>
+    <dimen name="margin_cardView">15dp</dimen>
+    <dimen name="padding_cardView">15dp</dimen>
+    <dimen name="padding_bottomBar">5dp</dimen>
+    <dimen name="textSize_bottomBar">20dp</dimen>
+    <dimen name="corner_radius_cardview">5dp</dimen>
+</resources>

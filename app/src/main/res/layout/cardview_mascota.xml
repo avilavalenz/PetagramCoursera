@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascota"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/corner_radius_cardview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_cardView"
+        android:id="@+id/fondo"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/imgImagen"
+            android:layout_width="@dimen/width_imgCardView"
+            android:layout_height="@dimen/height_imgCardView"
+            android:layout_margin="@dimen/margin_cardView"
+            android:layout_gravity="center"/>
+        <!--android:background="@drawable/buho"-->
+
+        <LinearLayout
+            android:background="@color/colorFondoBlanco"
+            android:layout_width="match_parent"
+            android:padding="@dimen/padding_bottomBar"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnHuesoLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bone"/>
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize_bottomBar"
+                android:text="@string/nombreMascota"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize_bottomBar"
+                    android:text="@string/cantidadRating"
+                    android:layout_gravity="right"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnHuesoLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bonelike"
+                    android:layout_gravity="right"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
