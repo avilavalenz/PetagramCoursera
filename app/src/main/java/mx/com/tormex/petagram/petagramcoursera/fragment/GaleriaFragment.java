@@ -1,6 +1,5 @@
 package mx.com.tormex.petagram.petagramcoursera.fragment;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -16,7 +15,6 @@ import mx.com.tormex.petagram.petagramcoursera.R;
 import mx.com.tormex.petagram.petagramcoursera.adapter.GaleriaAdaptador;
 import mx.com.tormex.petagram.petagramcoursera.adapter.MascotaAdaptador;
 import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
-
 
 /**
  * A simple {@link Fragment} subclass.
