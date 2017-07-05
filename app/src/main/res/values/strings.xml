@@ -3,5 +3,19 @@
     <string name="nombreMascota">Nombre de la mascota</string>
     <string name="cantidadRating">5</string>
     <string name="menu_about">Acerca de</string>
-    <string name="menu_settings">Configuracion</string>
+    <string name="menu_contact">Contacto</string>
+    <string name="informacion_contacto">Información de contacto:</string>
+    <string name="informacion_contacto_correo">avilavalenz@icloud.com</string>
+    <string name="informacion_contacto_whatsapp">(871)-271-4852</string>
+    <string name="informacion_contacto_twitter">\@avilavalenz</string>
+    <string name="acerca_de">Un poco de Manuel</string>
+    <string name="acerca_de_texto">Manuel Ávila es un desarrollador de software que vive en Gómez Palacio Durango y trabaja en Tormex en la ciudad de Torreón Coahuila. Egresó del Instituto Tecnológico Superior de Lerdo en 2015 y obtuvo el título de Ingeniero en Sistemas Computacionales. Cuando no trabaja le gusta jugar videojuegos, ir al cine, tomar fotografías y asistir a juegos de béisbol (su equipo favorito es Unión Laguna). </string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintCorreo">Correo electrónico</string>
+    <string name="hintComentarios">Comentarios</string>
+    <string name="enviar">Enviar</string>
+    <string name="tvNombreMascotaPerfil">Tecolotito</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

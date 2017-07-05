@@ -1,8 +1,6 @@
-package mx.com.tormex.petagram.petagramcoursera;
+package mx.com.tormex.petagram.petagramcoursera.adapter;
 
 import android.app.Activity;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.IllegalFormatCodePointException;
+
+import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
+import mx.com.tormex.petagram.petagramcoursera.R;
 
 /**
  * Created by Sistemas on 27/06/2017.

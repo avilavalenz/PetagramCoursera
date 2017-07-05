@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascota"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/corner_radius_cardview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_cardView"
+        android:id="@+id/galeriaFondo"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/imgImagenGaleria"
+            android:layout_width="@dimen/sizeImageGaleria"
+            android:layout_height="@dimen/sizeImageGaleria"
+            android:layout_margin="@dimen/margin_cardView"
+            android:layout_gravity="center"/>
+        <!--android:background="@drawable/buho"-->
+
+        <LinearLayout
+            android:background="@color/colorFondoBlanco"
+            android:layout_width="match_parent"
+            android:padding="@dimen/padding_bottomBar"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvRatingGaleria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize_bottomBarProfile"
+                    android:text="@string/cantidadRating"
+                    android:layout_gravity="right"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnHuesoLikeGaleria"
+                    android:layout_width="@dimen/sizeBone"
+                    android:layout_height="@dimen/sizeBone"
+                    android:background="@drawable/bonelike"
+                    android:layout_gravity="right"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

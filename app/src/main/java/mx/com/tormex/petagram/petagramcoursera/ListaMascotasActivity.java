@@ -1,21 +1,27 @@
 package mx.com.tormex.petagram.petagramcoursera;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import mx.com.tormex.petagram.petagramcoursera.adapter.PageAdapter;
+import mx.com.tormex.petagram.petagramcoursera.fragment.GaleriaFragment;
+import mx.com.tormex.petagram.petagramcoursera.fragment.RecyclerViewFragment;
+
 public class ListaMascotasActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> mascotas;
-    RecyclerView listaMascotas;
+
+    private Toolbar toolBar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +30,18 @@ public class ListaMascotasActivity extends AppCompatActivity {
 //        Toolbar miActionBar = (Toolbar)findViewById(R.id.miActionBar);
 //        setSupportActionBar(miActionBar);
 
-        listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        manager.setOrientation(LinearLayoutManager.VERTICAL);
+        toolBar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        setupViewPager();
 
-        listaMascotas.setLayoutManager(manager);
-        inicializarListaMascotas();
-        inicializarAdaptador();
+        /*
+
+        */
+
+        if (toolBar != null) {
+            setSupportActionBar(toolBar);
+        }
     }
 
     @Override
@@ -43,10 +54,10 @@ public class ListaMascotasActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.mAbout:
-                Toast.makeText(this, "Creado por avilavalenz", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, AcercaDeActivity.class));
                 break;
-            case R.id.mSettings:
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+            case R.id.mContact:
+                startActivity(new Intent(this, ContactoActivity.class));
                 break;
             case R.id.mStar:
                 Intent intent = new Intent(ListaMascotasActivity.this, MascotasFavoritasActivity.class);
@@ -57,18 +68,17 @@ public class ListaMascotasActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void inicializarListaMascotas(){
-        mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 1));
-        mascotas.add(new Mascota(R.drawable.cabra, "Cabra", 2));
-        mascotas.add(new Mascota(R.drawable.cerdo, "Cerdo", 3));
-        mascotas.add(new Mascota(R.drawable.elefante, "Elefante", 4));
-        mascotas.add(new Mascota(R.drawable.leopardo, "Leopardo", 5));
-        mascotas.add(new Mascota(R.drawable.zebra, "Zebra", 6));
+    private ArrayList<Fragment> agregarFragment(){
+        ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+        fragments.add(new RecyclerViewFragment());
+        fragments.add(new GaleriaFragment());
+        return fragments;
     }
 
-    public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
-        listaMascotas.setAdapter(adaptador);
+    public void setupViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragment()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_action_home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.iconcatprofile);
     }
 }

@@ -1,17 +1,17 @@
 package mx.com.tormex.petagram.petagramcoursera;
 
-import android.content.ClipData;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import mx.com.tormex.petagram.petagramcoursera.adapter.MascotaAdaptador;
+import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
 
 public class MascotasFavoritasActivity extends AppCompatActivity {
 
@@ -47,7 +47,7 @@ public class MascotasFavoritasActivity extends AppCompatActivity {
             case R.id.mAbout:
                 Toast.makeText(this, "Creado por avilavalenz", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.mSettings:
+            case R.id.mContact:
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
                 break;
         }

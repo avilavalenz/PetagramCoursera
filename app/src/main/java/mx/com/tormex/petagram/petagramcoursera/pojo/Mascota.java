@@ -1,4 +1,4 @@
-package mx.com.tormex.petagram.petagramcoursera;
+package mx.com.tormex.petagram.petagramcoursera.pojo;
 
 /**
  * Created by Sistemas on 27/06/2017.

@@ -7,5 +7,16 @@
     <dimen name="padding_cardView">15dp</dimen>
     <dimen name="padding_bottomBar">5dp</dimen>
     <dimen name="textSize_bottomBar">20dp</dimen>
+
     <dimen name="corner_radius_cardview">5dp</dimen>
+    <dimen name="iconSize">20dp</dimen>
+    <dimen name="marginInfoContacto">5dp</dimen>
+    <dimen name="marginRightIcon">5dp</dimen>
+    <dimen name="marginBottomDeveloperPicture">15dp</dimen>
+    <dimen name="borderCircleImage">4dp</dimen>
+    <dimen name="sizeCircleImage">150dp</dimen>
+    <dimen name="sizeNombreMascotaPerfil">30dp</dimen>
+    <dimen name="textSize_bottomBarProfile">30dp</dimen>
+    <dimen name="sizeImageGaleria">70dp</dimen>
+    <dimen name="sizeBone">40dp</dimen>
 </resources>
