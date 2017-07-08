@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import mx.com.tormex.petagram.petagramcoursera.db.ConstructorMascotas;
 import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
 import mx.com.tormex.petagram.petagramcoursera.R;
 
@@ -37,7 +38,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int position) {
+    public void onBindViewHolder(final MascotaViewHolder mascotaViewHolder, int position) {
         final Mascota mascota = mascotas.get(position);
         mascotaViewHolder.imgImagen.setImageResource(mascota.getFotografia());
         mascotaViewHolder.tvNombre.setText(mascota.getNombre());
@@ -52,6 +53,9 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Like", Toast.LENGTH_SHORT).show();
+                ConstructorMascotas constructorContactos = new ConstructorMascotas(activity);
+                constructorContactos.darLikeMascota(mascota);
+                mascotaViewHolder.tvRating.setText(String.valueOf(constructorContactos.obtenerLikesContacto(mascota) + " Likes"));
             }
         });
     }

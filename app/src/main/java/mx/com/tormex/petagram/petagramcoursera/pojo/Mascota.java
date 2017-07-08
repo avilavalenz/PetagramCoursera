@@ -5,14 +5,29 @@ package mx.com.tormex.petagram.petagramcoursera.pojo;
  */
 
 public class Mascota {
+
+    private int mascotaId;
     private int fotografia;
     private String nombre;
     private int rating;
 
-    public Mascota(int fotografia, String nombre, int rating) {
+    public Mascota(){
+
+    }
+
+    public Mascota(int mascotaId, int fotografia, String nombre, int rating) {
+        this.mascotaId = mascotaId;
         this.fotografia = fotografia;
         this.nombre = nombre;
         this.rating = rating;
+    }
+
+    public int getMascotaId() {
+        return mascotaId;
+    }
+
+    public void setMascotaId(int fotografia) {
+        this.mascotaId = mascotaId;
     }
 
     public int getFotografia() {

@@ -50,15 +50,15 @@ public class GaleriaFragment extends Fragment {
 
     public void inicializarListaMascotas(){
         mascotas = new ArrayList<>();
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 6));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 5));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 4));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 3));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 2));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 4));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 3));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 2));
-        mascotas.add(new Mascota(R.drawable.buho, "Buho", 2));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 6));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 5));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 4));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 3));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 2));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 4));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 3));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 2));
+//        mascotas.add(new Mascota(R.drawable.buho, "Buho", 2));
     }
 
     public void inicializarAdaptador(){
