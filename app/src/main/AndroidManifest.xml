@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.com.tormex.petagram.petagramcoursera">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +28,9 @@
                 android:value=".ListaMascotasActivity" />
         </activity>
         <activity android:name=".AcercaDeActivity" />
-        <activity android:name=".ContactoActivity"></activity>
+        <activity android:name=".ContactoActivity" />
+        <activity android:name=".DetalleMascota"></activity>
+        <activity android:name=".CuentaActivity"></activity>
     </application>
 
 </manifest>

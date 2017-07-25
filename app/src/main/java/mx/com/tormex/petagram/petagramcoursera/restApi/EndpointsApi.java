@@ -1,0 +1,40 @@
+package mx.com.tormex.petagram.petagramcoursera.restApi;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
+import mx.com.tormex.petagram.petagramcoursera.restApi.model.MascotaResponse;
+import mx.com.tormex.petagram.petagramcoursera.restApi.model.UsuarioInstagramResponse;
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+
+/**
+ * Created by Sistemas on 20/07/2017.
+ */
+
+public interface EndpointsApi {
+
+    @GET(ConstantesRestApi.URL_GET_RECENT_MEDIA_USER)
+    Call<MascotaResponse> getRecentMedia();
+
+    @GET(ConstantesRestApi.URL_GET_RECENT_MEDIA_LIKED_USER_ID)
+    Call<MascotaResponse> getRecentMediaLiked();
+
+    @GET(ConstantesRestApi.URL_GET_RECENT_MEDIA_USER_ID)
+    Call<MascotaResponse> getRecentMediaById(
+            @Path("id") String id
+    );
+//    @GET(ConstantesRestApi.URL_GET_USERS_SEARCH)
+//    Call<UsuarioInstagramResponse> getSearchUser();
+
+    @GET(ConstantesRestApi.URL_GET_USERS_SEARCH)
+    Call<UsuarioInstagramResponse> getSearchUser(
+            @Query("q") String q
+    );
+
+//    @GET(ConstantesRestApi.URL_GET_RECENT_MEDIA_USER)
+//    Call<MascotaResponse> getSearchUser();
+}

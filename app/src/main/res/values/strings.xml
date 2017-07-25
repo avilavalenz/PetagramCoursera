@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Petagram</string>
     <string name="nombreMascota">Nombre de la mascota</string>
-    <string name="cantidadRating">5</string>
+    <string name="cantidadRating">0</string>
     <string name="menu_about">Acerca de</string>
     <string name="menu_contact">Contacto</string>
+    <string name="menu_account">Cuenta</string>
     <string name="informacion_contacto">Información de contacto:</string>
     <string name="informacion_contacto_correo">avilavalenz@icloud.com</string>
     <string name="informacion_contacto_whatsapp">(871)-271-4852</string>
@@ -15,6 +16,8 @@
     <string name="hintComentarios">Comentarios</string>
     <string name="enviar">Enviar</string>
     <string name="tvNombreMascotaPerfil">Tecolotito</string>
+    <string name="cuenta">Escribe tu usuario</string>
+    <string name="guardarcuenta">Guardar cuenta</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

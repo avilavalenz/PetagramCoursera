@@ -18,7 +18,14 @@
             app:civ_border_color="@color/colorFondoBlanco"
             app:civ_border_width="@dimen/borderCircleImage"
             app:civ_shadow="true"
-            app:civ_shadow_radius="10"/>
+            app:civ_shadow_radius="10"
+            android:id="@+id/civImagenPerfil"/>
+
+        <!--ImageView
+            android:layout_width="@dimen/sizeCircleImage"
+            android:layout_height="@dimen/sizeCircleImage"
+            android:src="@drawable/buho"
+            android:id="@+id/civImagenPerfil"/-->
 
         <TextView
             android:id="@+id/tvNombreMascotaPerfil"

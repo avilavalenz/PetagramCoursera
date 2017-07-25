@@ -61,7 +61,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         Cursor registros = db.rawQuery(query, null);
 
         while (registros.moveToNext()){
-            Mascota mascotaActual = new Mascota();
+            /*Mascota mascotaActual = new Mascota();
             mascotaActual.setMascotaId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(1));
             mascotaActual.setFotografia(registros.getInt(2));
@@ -73,7 +73,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             } else {
                 mascotaActual.setRating(0);
             }
-            mascotas.add(mascotaActual);
+            mascotas.add(mascotaActual);*/
         }
         db.close();
         return mascotas;
@@ -93,7 +93,7 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     public int obtenerLikesContacto(Mascota mascota){
         int likes = 0;
-        String query = "SELECT COUNT(" + ConstantesBaseDatos.TABLE_LIKES_MASCOTA_NUMERO_LIKES + ") FROM " + ConstantesBaseDatos.TABLE_LIKES_MASCOTA + " WHERE " + ConstantesBaseDatos.TABLE_LIKES_MASCOTA_ID_MASCOTA + " = " + mascota.getMascotaId();
+        String query = "SELECT COUNT(" + ConstantesBaseDatos.TABLE_LIKES_MASCOTA_NUMERO_LIKES + ") FROM " + ConstantesBaseDatos.TABLE_LIKES_MASCOTA + " WHERE " + ConstantesBaseDatos.TABLE_LIKES_MASCOTA_ID_MASCOTA + " = " + mascota.getId();
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query, null);
         if(registros.moveToNext()){

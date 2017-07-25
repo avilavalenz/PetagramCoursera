@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import mx.com.tormex.petagram.petagramcoursera.R;
@@ -39,9 +41,14 @@ public class GaleriaAdaptador extends RecyclerView.Adapter<GaleriaAdaptador.Gale
     @Override
     public void onBindViewHolder(GaleriaViewHolder galeriaViewHolder, int position) {
         final Mascota fGaleria = galeria.get(position);
-        galeriaViewHolder.imgImagenGaleria.setImageResource(fGaleria.getFotografia());
-        galeriaViewHolder.tvRatingGaleria.setText(String.valueOf(fGaleria.getRating()));
+        //galeriaViewHolder.imgImagenGaleria.setImageResource(fGaleria.getUrlFoto());
+        galeriaViewHolder.tvRatingGaleria.setText(String.valueOf(fGaleria.getLikes()));
         galeriaViewHolder.galeriaFondo.setBackgroundResource(R.color.colorFondoAzul);
+
+        Picasso.with(activity)
+                .load(fGaleria.getUrlFoto())
+                .placeholder(R.drawable.buho)
+                .into(galeriaViewHolder.imgImagenGaleria);
 
         galeriaViewHolder.btnHuesoLikeGaleria.setOnClickListener(new View.OnClickListener() {
             @Override

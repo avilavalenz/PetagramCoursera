@@ -3,6 +3,7 @@ package mx.com.tormex.petagram.petagramcoursera.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -57,6 +58,12 @@ public class RecyclerViewFragment extends Fragment implements IRecyclerViewFragm
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         rvMascotas.setLayoutManager(manager);
+    }
+
+    @Override
+    public void generarGridLayout() {
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        rvMascotas.setLayoutManager(gridLayoutManager);
     }
 
     @Override

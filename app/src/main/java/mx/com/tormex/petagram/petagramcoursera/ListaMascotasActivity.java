@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,6 @@ import mx.com.tormex.petagram.petagramcoursera.fragment.GaleriaFragment;
 import mx.com.tormex.petagram.petagramcoursera.fragment.RecyclerViewFragment;
 
 public class ListaMascotasActivity extends AppCompatActivity {
-
 
     private Toolbar toolBar;
     private TabLayout tabLayout;
@@ -59,12 +59,15 @@ public class ListaMascotasActivity extends AppCompatActivity {
             case R.id.mContact:
                 startActivity(new Intent(this, ContactoActivity.class));
                 break;
+            case R.id.mAccount:
+                startActivity(new Intent(this, CuentaActivity.class));
+                break;
             case R.id.mStar:
                 Intent intent = new Intent(ListaMascotasActivity.this, MascotasFavoritasActivity.class);
                 startActivity(intent);
                 break;
         }
-
+        finish();
         return super.onOptionsItemSelected(item);
     }
 

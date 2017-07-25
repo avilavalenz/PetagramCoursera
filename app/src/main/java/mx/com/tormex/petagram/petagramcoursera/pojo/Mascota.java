@@ -6,51 +6,50 @@ package mx.com.tormex.petagram.petagramcoursera.pojo;
 
 public class Mascota {
 
-    private int mascotaId;
-    private int fotografia;
-    private String nombre;
-    private int rating;
+    private String id;
+    private String nombreCompleto;
+    private String urlFoto;
+    private int likes = 0;
 
     public Mascota(){
 
     }
 
-    public Mascota(int mascotaId, int fotografia, String nombre, int rating) {
-        this.mascotaId = mascotaId;
-        this.fotografia = fotografia;
-        this.nombre = nombre;
-        this.rating = rating;
+    public Mascota(String urlFoto, String nombreCompleto, int likes) {
+        this.urlFoto = urlFoto;
+        this.nombreCompleto = nombreCompleto;
+        this.likes = likes;
     }
 
-    public int getMascotaId() {
-        return mascotaId;
+    public String getId() {
+        return id;
     }
 
-    public void setMascotaId(int fotografia) {
-        this.mascotaId = mascotaId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public int getFotografia() {
-        return fotografia;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
 
-    public void setFotografia(int fotografia) {
-        this.fotografia = fotografia;
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getUrlFoto() {
+        return urlFoto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setUrlFoto(String urlFoto) {
+        this.urlFoto = urlFoto;
     }
 
-    public int getRating() {
-        return rating;
+    public int getLikes() {
+        return likes;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }
