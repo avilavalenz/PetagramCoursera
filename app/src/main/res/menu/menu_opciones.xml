@@ -15,7 +15,12 @@
     <item
         android:id="@+id/mAccount"
         android:title="@string/menu_account"
-        android:orderInCategory="101"/>
+        android:orderInCategory="102"/>
+
+    <item
+        android:id="@+id/mNotificacion"
+        android:title="@string/menu_recibir_notificacion"
+        android:orderInCategory="103"/>
 
     <item
         android:id="@+id/mStar"

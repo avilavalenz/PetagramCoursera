@@ -33,4 +33,12 @@ public final class ConstantesRestApi {
 
     //public static final String URL_GET_USERS_SEARCH = KEY_GET_USERS_SEARCH + "" + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
+
+    /**
+     * Constantes de rest api heroku
+     * */
+
+    public static final String ROOT_URL_HEROKU = "https://safe-citadel-17823.herokuapp.com/";
+    public static final String KEY_POST_ID_TOKEN = "token-device/";
+
 }

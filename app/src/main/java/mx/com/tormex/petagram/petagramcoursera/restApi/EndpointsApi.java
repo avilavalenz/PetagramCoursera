@@ -5,9 +5,13 @@ import android.content.SharedPreferences;
 
 import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
 import mx.com.tormex.petagram.petagramcoursera.restApi.model.MascotaResponse;
+import mx.com.tormex.petagram.petagramcoursera.restApi.model.UsuarioHerokuResponse;
 import mx.com.tormex.petagram.petagramcoursera.restApi.model.UsuarioInstagramResponse;
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -37,4 +41,11 @@ public interface EndpointsApi {
 
 //    @GET(ConstantesRestApi.URL_GET_RECENT_MEDIA_USER)
 //    Call<MascotaResponse> getSearchUser();
+
+    /**
+     * EndPoint de rest api heroku
+     * */
+    @FormUrlEncoded
+    @POST(ConstantesRestApi.KEY_POST_ID_TOKEN)
+    Call<UsuarioHerokuResponse> registrarTokenID(@Field("token") String token, @Field("id_usuario_instagram") String id_usuario_instagram);
 }

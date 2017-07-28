@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "925853753311",
+    "firebase_url": "https://petagramcoursera-ff56c.firebaseio.com",
+    "project_id": "petagramcoursera-ff56c",
+    "storage_bucket": "petagramcoursera-ff56c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925853753311:android:57ea42830b592748",
+        "android_client_info": {
+          "package_name": "mx.com.tormex.petagram.petagramcoursera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925853753311-v61ct8fseasdriihu26ih5a6ql3i0rdh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.tormex.petagram.petagramcoursera",
+            "certificate_hash": "453e658099dbb4700ab4ab3c35cdb5acc15fb02f"
+          }
+        },
+        {
+          "client_id": "925853753311-rqhgj44b77a9ctcr3oa0enjjlthdfi2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPU2mubIa7E-L97VugrVn0-sbnC_MFAxQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "925853753311-rqhgj44b77a9ctcr3oa0enjjlthdfi2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

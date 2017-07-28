@@ -60,10 +60,14 @@ public class CuentaActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = miPreferenciaCompartida.edit();
                 etCuentaInstagram = (EditText) findViewById(R.id.etCuentaInstagram);
                 String cuentaInstagram = etCuentaInstagram.getText().toString();
-                editor.putString("cuentaInstagram", cuentaInstagram);
-                editor.putString("id", usuarios.get(0).getId());
-                editor.putString("url", usuarios.get(0).getProfile_picture());
-                editor.putString("fullName", usuarios.get(0).getFull_name());
+                for (int i = 0; i< usuarios.size(); i++) {
+                    if (usuarios.get(i).getUsername().equals(cuentaInstagram)){
+                        editor.putString("cuentaInstagram", cuentaInstagram);
+                        editor.putString("id", usuarios.get(i).getId());
+                        editor.putString("url", usuarios.get(i).getProfile_picture());
+                        editor.putString("fullName", usuarios.get(i).getFull_name());
+                    }
+                }
 
                 editor.commit();
                 Toast.makeText(CuentaActivity.this, "Datos guardados con éxito.", Toast.LENGTH_SHORT).show();

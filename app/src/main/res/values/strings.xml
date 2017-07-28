@@ -5,6 +5,7 @@
     <string name="menu_about">Acerca de</string>
     <string name="menu_contact">Contacto</string>
     <string name="menu_account">Cuenta</string>
+    <string name="menu_recibir_notificacion">Recibir notificaciones</string>
     <string name="informacion_contacto">Información de contacto:</string>
     <string name="informacion_contacto_correo">avilavalenz@icloud.com</string>
     <string name="informacion_contacto_whatsapp">(871)-271-4852</string>
