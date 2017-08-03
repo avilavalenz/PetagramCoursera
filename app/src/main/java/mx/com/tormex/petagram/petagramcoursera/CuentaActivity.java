@@ -66,6 +66,17 @@ public class CuentaActivity extends AppCompatActivity {
                         editor.putString("id", usuarios.get(i).getId());
                         editor.putString("url", usuarios.get(i).getProfile_picture());
                         editor.putString("fullName", usuarios.get(i).getFull_name());
+                        switch (usuarios.get(i).getId()) {
+                            case "5753223183": //jorge.avilavalenz
+                                editor.putString("usuarioid", "5810080353");
+                                break;
+                            case "5810080353": //mismascotas2017
+                                editor.putString("usuarioid", "5753223183");
+                                break;
+                            default:
+                                editor.putString("usuarioid", "");
+                                break;
+                        }
                     }
                 }
 

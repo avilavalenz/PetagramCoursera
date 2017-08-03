@@ -20,6 +20,7 @@ import mx.com.tormex.petagram.petagramcoursera.pojo.Mascota;
 
 /**
  * Created by Sistemas on 04/07/2017.
+ * Galería de perfil de usuario
  */
 
 public class GaleriaAdaptador extends RecyclerView.Adapter<GaleriaAdaptador.GaleriaViewHolder> {

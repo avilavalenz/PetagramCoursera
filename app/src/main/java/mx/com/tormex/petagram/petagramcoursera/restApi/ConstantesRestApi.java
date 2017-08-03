@@ -8,7 +8,9 @@ public final class ConstantesRestApi {
     /*Obtener información de usuario propietario*/
     public static final String VERSION = "/v1/";
     public static final String ROOT_URL = "https://api.instagram.com" + VERSION;
-    public static final String ACCESS_TOKEN = "5753223183.109db68.02bee57e41d542659d9cd45fbf371e19";
+    //public static final String ACCESS_TOKEN = "5753223183.109db68.02bee57e41d542659d9cd45fbf371e19";
+    public static final String ACCESS_TOKEN = "5810080353.8c253d9.d52094964a454b88bd8d64b2d7fc5a98";
+
     public static final String KEY_ACCESS_TOKEN = "?access_token=";
     public static final String KEY_ACCESS_TOKEN_AND = "&access_token=";
 
@@ -34,11 +36,18 @@ public final class ConstantesRestApi {
     //public static final String URL_GET_USERS_SEARCH = KEY_GET_USERS_SEARCH + "" + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
 
+    //users/5753223183/media/recent/?access_token=5810080353.8c253d9.d52094964a454b88bd8d64b2d7fc5a98
+
+
+
+
     /**
      * Constantes de rest api heroku
      * */
 
     public static final String ROOT_URL_HEROKU = "https://safe-citadel-17823.herokuapp.com/";
     public static final String KEY_POST_ID_TOKEN = "token-device/";
+
+    public static final String KEY_LIKE = "like-instagram/{id}/{usuario}/";
 
 }

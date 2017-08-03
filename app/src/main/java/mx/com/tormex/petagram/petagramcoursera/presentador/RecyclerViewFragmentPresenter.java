@@ -53,12 +53,13 @@ public class RecyclerViewFragmentPresenter implements IRecyclerViewFragmentPrese
 
         SharedPreferences miPreferenciaCompartida = context.getSharedPreferences("preferenciaCuenta", Context.MODE_PRIVATE);
         String idCuentaInstagram = miPreferenciaCompartida.getString("id", "");
+        String idCunetaUsuarioAmigo = miPreferenciaCompartida.getString("usuarioid", "");
 
         Call<MascotaResponse> mascotaResponseCall;
         if (idCuentaInstagram == "")
             mascotaResponseCall = endpointsApi.getRecentMedia();
         else
-            mascotaResponseCall = endpointsApi.getRecentMediaLiked();
+            mascotaResponseCall = endpointsApi.getRecentMediaById(idCunetaUsuarioAmigo);
 
         mascotaResponseCall.enqueue(new Callback<MascotaResponse>() {
             @Override

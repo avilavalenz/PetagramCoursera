@@ -72,6 +72,8 @@ public class GaleriaFragment extends Fragment {
         Gson gsonMediaRecent = restApiAdapter.construyeGsonDeserializadorMediaRecent();
         EndpointsApi endpointsApi = restApiAdapter.establecerConexionRestApiInstagram(gsonMediaRecent);
         //mascotas.add(new Mascota("", "Manuel Avila", 3));
+
+
         SharedPreferences miPreferenciaCompartida = this.getContext().getSharedPreferences("preferenciaCuenta", Context.MODE_PRIVATE);
         String idCuentaInstagram = miPreferenciaCompartida.getString("id", "");
         String urlCuentaInstagram = miPreferenciaCompartida.getString("url", "http://epaper2.mid-day.com/images/no_image_thumb.gif");

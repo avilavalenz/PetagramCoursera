@@ -31,6 +31,7 @@ public interface EndpointsApi {
     Call<MascotaResponse> getRecentMediaById(
             @Path("id") String id
     );
+
 //    @GET(ConstantesRestApi.URL_GET_USERS_SEARCH)
 //    Call<UsuarioInstagramResponse> getSearchUser();
 
@@ -48,4 +49,7 @@ public interface EndpointsApi {
     @FormUrlEncoded
     @POST(ConstantesRestApi.KEY_POST_ID_TOKEN)
     Call<UsuarioHerokuResponse> registrarTokenID(@Field("token") String token, @Field("id_usuario_instagram") String id_usuario_instagram);
+
+    @GET(ConstantesRestApi.KEY_LIKE)
+    Call<UsuarioHerokuResponse> like(@Path("id") String id, @Path("usuario") String usuario);
 }
