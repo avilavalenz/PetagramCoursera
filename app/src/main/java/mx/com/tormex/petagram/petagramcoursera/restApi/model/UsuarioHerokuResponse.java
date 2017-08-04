@@ -8,14 +8,24 @@ public class UsuarioHerokuResponse {
     private String id;
     private String token;
     private String id_usuario_instagram;
+    private String username;
 
-    public UsuarioHerokuResponse(String id, String token, String id_usuario_instagram) {
+    public UsuarioHerokuResponse(String id, String token, String id_usuario_instagram, String username) {
         this.id = id;
         this.token = token;
         this.id_usuario_instagram = id_usuario_instagram;
+        this.username = username;
     }
 
     public UsuarioHerokuResponse() {
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getId() {

@@ -107,11 +107,14 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     public void likeInstagram(View v){
-        UsuarioHerokuResponse usuarioResponse = new UsuarioHerokuResponse("-KqcnCSU8bZ1kZClf4iP", "chLwHWRKhIs:APA91bFPAFQIgCaqintGC-_j1pK4lcIZTlnUH7MPRxAQB1y2yDhsMRYNyvbz28vkjR__b_CJxMVtdznXFpVzhf4qbgEp_GJgJxfJ3-a1OzfeaduK832wZ3syyWyElCZD7yzuOLcNucmq", "5753223183"); //mismascotas2017
-        //UsuarioHerokuResponse usuarioResponse = new UsuarioHerokuResponse("-KqcnCSU8bZ1kZClf4iP", "eVFjG0BKFYo:APA91bHK6Z2IVQ8R6rqkLdrK0k1DG6m2j-rOyh0kY1F9bH1jsuq3sz_CsF0I6-p1GiMzJFagzrDkzlrj6rhrv8bkhrujuUNoS7R-YkhBuyLV_JTxZcs-SWQ8bVsB5Gn1HU3M_CYO-WA-", "5810080353"); //mismascotas2017
+        //new UsuarioHerokuResponse (idFireBaseDueñoToken, tokenDueñoToken, idUsuarioInstagramDueñoToken, usernameDestinatario)
+        //UsuarioHerokuResponse usuarioResponse = new UsuarioHerokuResponse("-Kqe7Tk1fqkbEcKXhTDq", "fdCzvxzrFqw:APA91bGsXX8KEQ-IRt51Diqg4p6ci-BiByoTKGORrKowbGQE97mb0i_QJZEI14lJVT0GRFltht6nvrmpYGuahGqb1WZrq5B1DuEWD4KeOfcERxYIDkdSANWpbRwIQnlj_W8DDnp3WvZH", "5810080353", "jorge.avilavalenz"); //mismascotas2017
+        UsuarioHerokuResponse usuarioResponse = new UsuarioHerokuResponse("-Kqe71o40YgJvaasxows", "ecXiRe1kURE:APA91bHXMZEDYktBC4iDtzYJeDCL7ntoMlry94sF8rrRHXc6Fqt0z2nkD6iBk0kGvm92R73qX_gbWf-fNnwHg16mi9lQeYSFXAYardcByeQiAwAxZTtbqXJPG4AdxtU3Lcby8opwcqB1", "5753223183", "mismascotas2017"); //jorge.avilavalenz
+
 
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         EndpointsApi endpointsApi = restApiAdapter.establecerConexionRestApiHeroku();
+        //Enviar notificacion de like en instagram
         Call<UsuarioHerokuResponse> usuarioHerokuResponseCall = endpointsApi.like(usuarioResponse.getId(), usuarioResponse.getId_usuario_instagram());
 
         usuarioHerokuResponseCall.enqueue(new Callback<UsuarioHerokuResponse>() {

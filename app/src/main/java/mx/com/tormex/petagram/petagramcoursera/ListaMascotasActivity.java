@@ -97,6 +97,7 @@ public class ListaMascotasActivity extends AppCompatActivity {
 
     public void setupViewPager(){
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragment()));
+        viewPager.setCurrentItem(1);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_action_home);
         tabLayout.getTabAt(1).setIcon(R.drawable.iconcatprofile);
@@ -107,7 +108,7 @@ public class ListaMascotasActivity extends AppCompatActivity {
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         EndpointsApi endpoints = restApiAdapter.establecerConexionRestApiHeroku();
         SharedPreferences miPreferenciaCompartida = getSharedPreferences("preferenciaCuenta", Context.MODE_PRIVATE);
-        Call<UsuarioHerokuResponse> usuarioResponseCall = endpoints.registrarTokenID(token, miPreferenciaCompartida.getString("id", ""));
+        Call<UsuarioHerokuResponse> usuarioResponseCall = endpoints.registrarTokenID(token, miPreferenciaCompartida.getString("id", ""), miPreferenciaCompartida.getString("cuentaInstagram", ""));
 
         usuarioResponseCall.enqueue(new Callback<UsuarioHerokuResponse>() {
             @Override
@@ -116,6 +117,7 @@ public class ListaMascotasActivity extends AppCompatActivity {
                 Log.d("ID_FIREBASE", usuarioHerokuResponse.getId());
                 Log.d("USUARIO_FIREBASE", usuarioHerokuResponse.getToken());
                 Log.d("ID_USUARIO_INSTAGRAM", usuarioHerokuResponse.getId_usuario_instagram());
+                Log.d("USUARIO_INSTAGRAM", usuarioHerokuResponse.getUsername());
             }
 
             @Override

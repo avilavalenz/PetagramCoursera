@@ -48,7 +48,7 @@ public interface EndpointsApi {
      * */
     @FormUrlEncoded
     @POST(ConstantesRestApi.KEY_POST_ID_TOKEN)
-    Call<UsuarioHerokuResponse> registrarTokenID(@Field("token") String token, @Field("id_usuario_instagram") String id_usuario_instagram);
+    Call<UsuarioHerokuResponse> registrarTokenID(@Field("token") String token, @Field("id_usuario_instagram") String id_usuario_instagram, @Field("username") String username);
 
     @GET(ConstantesRestApi.KEY_LIKE)
     Call<UsuarioHerokuResponse> like(@Path("id") String id, @Path("usuario") String usuario);

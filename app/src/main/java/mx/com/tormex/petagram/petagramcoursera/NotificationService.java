@@ -13,6 +13,8 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import mx.com.tormex.petagram.petagramcoursera.fragment.GaleriaFragment;
+
 /**
  * Created by Sistemas on 27/07/2017.
  */
@@ -25,7 +27,7 @@ public class NotificationService extends FirebaseMessagingService {
         Log.d(TAG, "From: " + remoteMessage.getFrom());
         Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
 
-        Intent i = new Intent(this, ListaMascotasActivity.class);
+        Intent i = new Intent(this, GaleriaFragment.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_ONE_SHOT);
         Uri sonido = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
