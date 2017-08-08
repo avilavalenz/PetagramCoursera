@@ -48,6 +48,14 @@
 
         </service>
 
+        <receiver android:name=".restApi.SeguirUsuario" >
+            <intent-filter>
+                <action android:name="SEGUIR_USUARIO" />
+                <action android:name="VER_PERFIL" />
+                <action android:name="VER_USUARIO" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
